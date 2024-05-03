@@ -1,0 +1,27 @@
+{
+  "canisters": {
+    "d_backend": {
+      "candid": "src/d_backend/d_backend.did",
+      "package": "d_backend",
+      "type": "rust"
+    },
+    "d_frontend": {
+      "dependencies": [
+        "d_backend"
+      ],
+      "source": [
+        "src/d_frontend/dist"
+      ],
+      "type": "assets",
+      "workspace": "d_frontend"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}
