@@ -80,7 +80,6 @@ RUN sh -ci "$(curl -fsSL https://internetcomputer.org/install.sh)"
 COPY --chown=Matiki:Matiki . /canister
 WORKDIR /canister
 RUN sudo chown -R Matiki:Matiki /canister
-RUN chmod -R 755 /canister
 
 RUN sudo chown -R Matiki:Matiki /opt/cargo
 
