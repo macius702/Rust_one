@@ -12,6 +12,7 @@ ENV RUST_VERSION=1.75.0
 # Install a basic environment needed for our build tools
 RUN apt -yq update && \
     apt -yqq install --no-install-recommends curl ca-certificates \
+        mc git tree\
         build-essential pkg-config libssl-dev llvm-dev liblmdb-dev clang cmake rsync
 
 # Install Node.js using nvm
@@ -53,5 +54,11 @@ RUN sh -ci "$(curl -fsSL https://internetcomputer.org/install.sh)"
 
 COPY . /canister
 WORKDIR /canister
+
+
+RUN useradd -m MAtiki
+USER Matiki
+RUN dfx start --background --clean --host 0.0.0.0:4943
+
 
 # SHELL ["/bin/bash", "-c"]
