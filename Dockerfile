@@ -66,6 +66,14 @@ RUN curl --fail -sSf https://raw.githubusercontent.com/creationix/nvm/$NVM_VERSI
 RUN . "$NVM_DIR/nvm.sh" && nvm install $NODE_VERSION
 RUN . "$NVM_DIR/nvm.sh" && nvm use v$NODE_VERSION
 RUN . "$NVM_DIR/nvm.sh" && nvm alias default v$NODE_VERSION
+# RUN npm cache clean --force
+
+
+# RUN npm install --save-dev vite
+
+# Install TypeScript
+# RUN npm install -g typescript
+
 # Install dfx
 RUN sh -ci "$(curl -fsSL https://internetcomputer.org/install.sh)"
 

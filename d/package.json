@@ -14,5 +14,8 @@
   "type": "module",
   "workspaces": [
     "src/d_frontend"
-  ]
+  ],
+  "devDependencies": {
+    "vite": "^5.2.11"
+  }
 }
