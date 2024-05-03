@@ -6,4 +6,5 @@ echo $PATH
 cd d
 npm install
 /home/Matiki/.local/share/dfx/bin/dfx deploy
+/home/Matiki/.local/share/dfx/bin/dfx deploy
 /bin/bash

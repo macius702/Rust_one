@@ -41,6 +41,8 @@ RUN echo 'Matiki ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers
 # Switch to the Matiki user
 USER Matiki
 RUN sudo chown -R Matiki:Matiki /opt/cargo
+RUN cargo install candid-extractor
+
 
 
 # Install Node.js using nvm
