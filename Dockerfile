@@ -77,7 +77,7 @@ RUN . "$NVM_DIR/nvm.sh" && nvm alias default v$NODE_VERSION
 # Install dfx
 RUN sh -ci "$(curl -fsSL https://internetcomputer.org/install.sh)"
 
-COPY --chown=Matiki:Matiki . /canister
+COPY  . /canister
 WORKDIR /canister
 
 RUN sudo chown -R Matiki:Matiki /opt/cargo
